@@ -22,7 +22,7 @@ public class BaseModel {
 
     public int GetResponseCode() throws IOException {
         int responseCode = httpsURLConnection.getResponseCode();
-        System.out.println(responseCode);
+        System.out.println("Recieved Response code " + responseCode);
         return responseCode;
     }
 
@@ -41,7 +41,7 @@ public class BaseModel {
     public Object GetTagValue(StringBuffer response, String tagName) {
         JSONObject obj_JSONObject = new JSONObject(response.toString());
         Object value = obj_JSONObject.get(tagName);
-        System.out.println(value);
+        System.out.println("Recieved Planets Count" + value);
         return value;
 
     }

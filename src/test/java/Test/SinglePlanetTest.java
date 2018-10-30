@@ -18,7 +18,7 @@ public class SinglePlanetTest {
         {
             model.PerformRequestToSwapi(singlePlanetUrl + planetId + "/?format=json");
             StringBuffer responseText = model.GetResponseText();
-            System.out.println(responseText);
+            System.out.println("Recieved Planet Content " + responseText);
             boolean planetContent = model.CompareInfo(responseText, planetId);
             Assert.assertEquals(planetContent, true);
         }
@@ -29,8 +29,7 @@ public class SinglePlanetTest {
     public void RequestPlanetByIdNegativeTest(String planetId) throws IOException {
         model.PerformRequestToSwapi(singlePlanetUrl + planetId + "/?format=json");
         int responseCode = model.GetResponseCode();
-        //StringBuffer responseText = model.GetResponseText();
-        System.out.println(responseCode);
+        System.out.println("Recieved Response Code " + responseCode);
         Assert.assertEquals(responseCode == 404, true);
     }
 
