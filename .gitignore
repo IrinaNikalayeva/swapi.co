@@ -1,0 +1,21 @@
+#target and testng report output
+target/
+test-output/
+
+#log files
+logs/
+
+#ide project files
+.settings/
+.idea/
+.classpath
+.project
+
+#java class files
+out/
+*.class
+
+*.iml
+
+.DS_Store
+
